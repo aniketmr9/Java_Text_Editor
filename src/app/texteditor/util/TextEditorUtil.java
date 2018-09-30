@@ -18,11 +18,11 @@ public class TextEditorUtil
 	public void openFile(JTextArea textArea, JFrame frame)
 	{
 		int approveOpen = fileChooser.showOpenDialog(null);
-		System.out.println(approveOpen);
+		//System.out.println(approveOpen);
 		if(approveOpen == JFileChooser.APPROVE_OPTION)
 		{
 			openFileDir = fileChooser.getSelectedFile();
-			System.out.println(openFileDir.getAbsolutePath());
+			//System.out.println(openFileDir.getAbsolutePath());
 			openFileDir = new File(openFileDir.getAbsolutePath());
 			String textToOpen = "",lineInFile = null;
 			BufferedReader reader = null;				
@@ -69,11 +69,11 @@ public class TextEditorUtil
 	public void saveFile(JTextArea textArea, JFrame frame)
 	{
 		int approveSave = fileChooser.showSaveDialog(null);
-		System.out.println(approveSave);		
+		//System.out.println(approveSave);		
 		if(approveSave == JFileChooser.APPROVE_OPTION)
 		{
 			saveFileDir = fileChooser.getSelectedFile();
-			System.out.println(saveFileDir.getAbsolutePath());
+			//System.out.println(saveFileDir.getAbsolutePath());
 			String textToSave = textArea.getText();
 			saveFileDir = new File(saveFileDir.getAbsolutePath());
 			BufferedWriter writer = null;
@@ -115,7 +115,7 @@ public class TextEditorUtil
 		}
 		else
 		{
-			System.out.println("save existing");
+			//System.out.println("save existing");
 			String textToSave = textArea.getText();
 			if(openFileDir == null)
 			{
